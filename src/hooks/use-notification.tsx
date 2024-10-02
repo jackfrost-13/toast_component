@@ -8,10 +8,10 @@ const useNotification = () => {
     const triggerNotification = useCallback((notification: NotificationPropsType) => {
         setNotificationProps((prev) => [...prev, notification])
         setTimeout(()=>{
-            setNotificationProps(notificationProps.filter(
+            setNotificationProps((prev) => prev.filter(
                 (item) => item !== notification
             ));
-        }, notification.duration)
+        }, notification.duration);
     },[])
 
     const NotificationComponent = (
