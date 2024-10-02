@@ -1,5 +1,4 @@
 import './App.css'
-import Notification from './components/notification'
 import useNotification from './hooks/use-notification'
 
 function App() {
